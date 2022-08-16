@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import Search from "./components/Search";
 import Results from "./components/Results";
-import Result from "./components/Result";
 import Popup from "./components/Popup";
 
 function App() {
@@ -35,7 +34,7 @@ const handleInput = (e) => {
 }
 
 const openPopup = id => {
-  axios(apiurl + "&i=" + id). then(({ data }) => {
+  axios(apiurl + "&i=" + id).then(({ data }) => {
     let result = data;
 
     setState(prevState => {
